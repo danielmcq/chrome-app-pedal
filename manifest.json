@@ -1,0 +1,34 @@
+{
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ],
+            "persistant": true
+        }
+    },
+    "description": "Helps map certain foot pedal devices.",
+    "externally_connectable": {
+        "matches": [
+            "*://*.*.com/*"
+        ]
+    },
+    "manifest_version": 2,
+    "name": "Foot-Pedal Helper",
+    "permissions": [
+        "hid",
+        {
+            "usbDevices": [
+                {
+                    "productId": 255,
+                    "vendorId": 1523
+                },
+                {
+                    "vendorId": 1204,
+                    "productId": 21845
+                }
+            ]
+        }
+    ],
+    "version": "0.1.0"
+}
